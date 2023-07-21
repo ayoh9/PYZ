@@ -34,6 +34,7 @@ public class VirtualAccountController {
     @PostMapping(value = "/virtualAccount", produces = "Application/JSON")
     public ResponseEntity<?> generateVirtualAccount(@RequestHeader("Authorization") String authHeader,
                                                     @RequestBody ClientRequest clientRequest) {
+        logger.info("In virtualAccount service");
         // Validate Client Credentials
         String clientUsername = null;
         String clientPassword = null;
